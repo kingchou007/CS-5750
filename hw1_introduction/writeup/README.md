@@ -1,4 +1,4 @@
-# Project 1: Introduction [![tests](../../../badges/submit-proj1/pipeline.svg)](../../../pipelines/submit-proj1/latest)]
+# Project 1: Introduction [![tests]](../../../badges/submit-proj1/pipeline.svg)](../../../pipelines/submit-proj1/latest)
 ## 1. Define in your own words what a node, topic, publisher, and subscriber are and how they relate to each other.
 - node: is a process that performs a specific task, an executable file that runs independently. Different nodes can use different programming languages(e.g. c++, python)
 - topic: is a route used to transfer data, which include the message type
