@@ -1,2 +1,2 @@
-# Foundation of Robotics
-Developing with ROS
+Foundation of Robotics at Cornell
+
