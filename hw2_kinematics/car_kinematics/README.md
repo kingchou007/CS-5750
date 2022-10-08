@@ -40,3 +40,40 @@ $$
 1.3:
 
 ![1.3](Figure_1.png)
+
+
+
+1.5
+
+![M1](M1.png)
+M1
+motion_params:
+  vel_std:    0.05
+  alpha_std:  0.5
+  x_std:      0.05
+  y_std:      0.05
+  theta_std:  0.01
+
+
+![M2](M2.png)
+M2
+motion_params:
+  vel_std:    0.04
+  alpha_std:  0.1
+  x_std:      0.05
+  y_std:      0.01
+  theta_std:  0.01
+
+
+![M3](M3.png)
+motion_params:
+  vel_std:    0.04
+  alpha_std:  0.07
+  x_std:      0.01
+  y_std:      0.01
+  theta_std:  0.01
+
+
+modified the x_std and alpha_std
+
+

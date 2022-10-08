@@ -5,8 +5,7 @@ import rosunit
 import unittest
 import time
 
-from car_kinematics.kinematic_model import KinematicCarMotionModel
-
+# from car_kinematics.kinematic_model import KinematicCarMotionModel
 
 def particle_error(particles, target):
     """Compute the error between a set of particles and a target state.
