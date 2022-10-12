@@ -49,8 +49,7 @@ $$
 
 
 
-M1
-motion_params:
+*M1 motion_params*:
   vel_std:    0.05
   alpha_std:  0.5
   x_std:      0.05
@@ -62,8 +61,7 @@ motion_params:
 
 
 
-M2
-motion_params:
+*M2 motion_params*:
   vel_std:    0.04
   alpha_std:  0.1
   x_std:      0.05
@@ -75,7 +73,7 @@ motion_params:
 
 
 
-motion_params:
+*M3 motion_params*:
   vel_std:    0.04
   alpha_std:  0.07
   x_std:      0.01
@@ -83,6 +81,6 @@ motion_params:
   theta_std:  0.01
 
 
-modified the x_std and alpha_std
+Result: modified the x_std and alpha_std
 
 
