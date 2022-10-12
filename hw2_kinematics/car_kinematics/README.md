@@ -46,6 +46,9 @@ $$
 1.5
 
 ![M1](M1.png)
+
+
+
 M1
 motion_params:
   vel_std:    0.05
@@ -56,6 +59,9 @@ motion_params:
 
 
 ![M2](M2.png)
+
+
+
 M2
 motion_params:
   vel_std:    0.04
@@ -66,6 +72,9 @@ motion_params:
 
 
 ![M3](M3.png)
+
+
+
 motion_params:
   vel_std:    0.04
   alpha_std:  0.07
