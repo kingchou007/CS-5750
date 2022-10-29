@@ -66,8 +66,6 @@ class KinematicCarMotionModel:
             M x 3 np.array, where the three columns are dx, dy, dtheta
 
         """
-        # BEGIN "QUESTION 1.2" ALT="return np.zeros_like(states, dtype=float)"
-
         changes_in_statues = np.zeros_like(states, dtype=float)
         dtheta = changes_in_statues[:, 2]
         
@@ -84,8 +82,6 @@ class KinematicCarMotionModel:
         changes_in_statues[t, 1] = val * (np.cos(t_theta) - np.cos(new_theta))
         
         return changes_in_statues
-        
-        # END
 
     def apply_deterministic_motion_model(self, states, vel, alpha, dt):
         """Propagate states through the determistic kinematic car motion model.
@@ -109,16 +105,11 @@ class KinematicCarMotionModel:
             dt (float): control duration
         """
         n_particles = states.shape[0]
-
-        # Hint: use same controls for all the particles
-        # BEGIN SOLUTION "QUESTION 1.3"
         controls = np.tile(np.array([vel, alpha]),(n_particles, 1))
         state_changes = self.compute_changes(states, controls, dt)
         states += state_changes
         states[:, 2] = (states[:, 2] + np.pi) % (2 * np.pi) - np.pi
         states[states[:, 2] == -np.pi, 2] = np.pi
-        
-        # END SOLUTION
 
     def apply_motion_model(self, states, vel, alpha, dt):
         """Propagate states through the noisy kinematic car motion model.
@@ -141,11 +132,7 @@ class KinematicCarMotionModel:
             alpha (float): nominal control steering angle
             dt (float): control duration
         """
-        n_particles = states.shape[0]
-
-        # Hint: you may find the np.random.normal function useful
-        # BEGIN SOLUTION "QUESTION 1.4"
-       
+        n_particles = states.shape[0]       
         v = np.random.normal(vel, self.vel_std, n_particles)
         a = np.random.normal(alpha, self.alpha_std, n_particles)
         controls = np.stack((v, a), axis = -1)
@@ -161,4 +148,3 @@ class KinematicCarMotionModel:
         states[:, 2] += d_theta
         states[:, 2] = (states[:, 2] + np.pi) % (2 * np.pi) - np.pi
         states[states[:, 2] == -np.pi, 2] = np.pi
-        # END SOLUTION
